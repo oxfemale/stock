@@ -3,7 +3,7 @@
 // $document = phpQuery::newDocument($html);
 // $echo = $document->find('.content');
 ini_set('max_execution_time', 1000);
-echo "fgdg";
+
 include_once 'C:\Apache24\htdocs\www\parcers\libs\phpQuery-onefile.php';
 function curl_get_contents($url)
 {
@@ -78,28 +78,27 @@ function curl_get_contents($url)
         }
         
 
-		for($i=0;$i<sizeof($p_link);$i++){
-			echo $p_link[$i];
+            print_r($p_link);
 			echo '<br>';
-			echo $price_bf[$i];
+			print_r($price_bf);
 			echo '<br>';
-			echo $price_af[$i];
+			print_r($price_af);
 			echo '<br>';
-			echo $img[$i];
+			print_r($img);
 			echo '<br>';
-            echo $name[$i];
+            print_r($name);
             echo '<br>';
-            echo $p_desc[$i];
+            print_r($p_desc);
             echo '<br>';
-            echo $start[$i];
+            print_r($start);
             echo '<br>';
-            echo $end[$i];
+            print_r($end);
             echo '<br>';
-            echo $p_group[$i];
+            print_r($p_group);
             echo '<br>';
 
             
-		}
+		
 
 	
 
