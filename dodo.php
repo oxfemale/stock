@@ -39,7 +39,7 @@ function curl_get_contents($url)
      }
     foreach($doc->find('.bonus-actions__section-row .bonus-actions__banner') as $it){
       $it = pq($it);
-      array_push($name,$it->find('h2')); 
+      array_push($name,$it->find('h2')->clone()->children()->remove()->end()->text()); 
       array_push($p_desc,$it->find('.bonus-actions__desc p')); 
       
     }
