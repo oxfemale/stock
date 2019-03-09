@@ -60,6 +60,9 @@ function curl_get_contents($url)
 		}
 
 		for($i=0;$i<$count;$i++){
+			if($i%2=0){
+				sleep(1);
+			{
 			$file1 = curl_get_contents($p_link[$i]);
 			$doc1 = phpQuery::newDocument($file1);
 			$img[] = $doc1->find('._seoImg.main-image:eq(0)')->attr('href');
