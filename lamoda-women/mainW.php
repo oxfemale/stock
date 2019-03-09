@@ -58,9 +58,7 @@ sleep(1);
 $url = "https://www.lamoda.ru/c/371/clothes-trikotazh/?labels=1748&sf=381&display_locations=outlet&page=";
 parce_it(2,$url,'lamoda-tolstovki','tolstovki',$p_link,$price_bf,$price_af,$img,$name,$p_desc,$start,$end,$p_group,$p_brand,$p_category,$gender);
 sleep(1);
-$url = "https://www.lamoda.ru/c/397/clothes-d-insy/?labels=1748&sf=381&display_locations=outlet&page=";
-parce_it(2,$url,'lamoda-jeens','jeens',$p_link,$price_bf,$price_af,$img,$name,$p_desc,$start,$end,$p_group,$p_brand,$p_category,$gender);
-sleep(1);
+
 $url = "https://www.lamoda.ru/c/397/clothes-d-insy/?labels=1748&sf=381&display_locations=outlet&page=";
 parce_it(2,$url,'lamoda-jeens','jeens',$p_link,$price_bf,$price_af,$img,$name,$p_desc,$start,$end,$p_group,$p_brand,$p_category,$gender);
 sleep(1);
