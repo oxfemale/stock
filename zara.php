@@ -60,7 +60,7 @@ function curl_get_contents($url)
 		}
 
 		for($i=0;$i<$count;$i++){
-			if($i%2=0){
+			if($i%2==0){
 				sleep(1);
 			{
 			$file1 = curl_get_contents($p_link[$i]);
