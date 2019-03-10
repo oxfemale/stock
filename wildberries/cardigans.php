@@ -34,6 +34,7 @@ $end = array();
 $p_group = array();
 $p_brand = array();
 $p_category = array();
+$gender = array();
 
 $url = "https://www.wildberries.ru/catalog/muzhchinam/odezhda/dzhempery-i-kardigany?pagesize=100&sort=sale&page=";
 
@@ -41,8 +42,8 @@ $file = curl_get_contents($url);
 $doc = phpQuery::newDocument($file);
 
 
-parce_it(3,$url,'wildberries-cardigans','cardigans',$p_link,$price_bf,$price_af,$img,$name,$p_desc,$start,$end,$p_group,$p_brand,$p_category);
-print_all($p_link,$price_bf,$price_af,$img,$name,$p_desc,$start,$end,$p_group,$p_brand,$p_category);
+parce_it(3,$url,'wildberries-cardigans','cardigans',$p_link,$price_bf,$price_af,$img,$name,$p_desc,$start,$end,$p_group,$p_brand,$p_category,$gender);
+print_all($p_link,$price_bf,$price_af,$img,$name,$p_desc,$start,$end,$p_group,$p_brand,$p_category,$gender);
 
            
             
