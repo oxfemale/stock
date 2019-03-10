@@ -2,7 +2,7 @@
 ini_set('max_execution_time', 1000);
 
 include_once 'C:\Apache24\htdocs\www\parcers\libs\phpQuery-onefile.php'; 
-require 'parce.php';
+require 'wb_parce.php';
 require 'print.php';
 
 
