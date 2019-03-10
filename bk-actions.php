@@ -23,6 +23,10 @@ $p_desc = array();
 $start = array();
 $end = array();
 $p_group = array();
+$p_brand = array();
+$p_category = array();
+$gender = array();
+
 
 
 $url = "https://burgerking.ru/actions";
@@ -32,7 +36,7 @@ $doc = phpQuery::newDocument($file);
 
 foreach($doc->find('.container-fluid.hero .carouselItem') as $it){
     $it = pq($it);
-    echo $it;
+    //echo $it;
     //echo $it->find('.big-img')->attr('src');
     array_push($img, (string)$it->find('.big-img')->attr('src'));
     if((string)$it->find('.bk-btn.bk-btn-orange')->attr('href')!=""){
@@ -44,6 +48,9 @@ foreach($doc->find('.container-fluid.hero .carouselItem') as $it){
     //array_push($p_link, (string)$it->find('.bk-btn.bk-btn-orange')->attr('href'));
     // array_push($p_link,$url);
     array_push($p_group,"BK-ACTIONS");
+    $p_brand[] = null;
+    $p_category[] = null;
+    $gender[] = null;
     $price_bf[]  = null;
     $price_af[] = null;
     $name[] = null;
