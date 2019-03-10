@@ -25,10 +25,15 @@ function parce_it($iter,$url,$group,$category,&$p_link,&$price_bf,&$price_af,&$i
             $it = pq($it);
             array_push($p_link,(string)$it->find('.ref_goods_n_p')->attr('href'));
             if((string)$it->find('.thumbnail')->attr('data-original')==''){
-                array_push($img, (string)$it->find('.thumbnail')->attr('src'));
+                $str = (string)$it->find('.thumbnail')->attr('src');
+                $str = preg_replace('^c246x328^','big',$str);
+                array_push($img, $str);
             }
             else{
-                array_push($img, (string)$it->find('.thumbnail')->attr('data-original'));
+                $str = (string)$it->find('.thumbnail')->attr('data-original');
+                $str = preg_replace('^c246x328^','big',$str);
+                array_push($img, $str);
+               
             }
             $pricea = (string)$it->find('.lower-price')->clone()->children()->remove()->end()->text();
             $pricea = preg_replace('~\D+~','',$pricea);
