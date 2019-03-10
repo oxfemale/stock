@@ -23,6 +23,9 @@ function curl_get_contents($url)
      $start = array();
      $end = array();
      $p_group = array();
+$p_brand = array();
+$p_category = array();
+$gender = array();
 
 
 for($j=1;$j<30;$j++){
@@ -41,6 +44,9 @@ $doc->find('#primary .post-thumb a img');
     $end[] = null;
     $price_bf[]  = null;
 	$price_af[] = null;
+	 $p_brand[] = null;
+	 $p_category[] = null;
+	 $gender[] = null;
 
  }
  foreach($doc->find('#primary .entry-content ') as $it){
